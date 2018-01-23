@@ -38,4 +38,14 @@ describe('Park', function(){
     assert.strictEqual(park.enclosure.length, 2);
   })
 
+  it('can add get all dinosaurs with more than two offspring', function(){
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    var resultArray = [];
+    resultArray.push(dinosaur2);
+    var testResult = park.moreThanTwoEggs();
+    assert.deepEqual(resultArray, testResult);
+  })
+
 })
