@@ -20,4 +20,14 @@ Park.prototype.moreThanTwoEggs = function(){
   return resultArray;
 }
 
+Park.prototype.calculateDinosaurs = function(numberOfYears){
+  var totalOffspring = 0;
+  for (var i = 0; i < this.enclosure.length; i++) {
+    var offspringPerDinosaur = Math.pow(this.enclosure[i].numberOfOffspring, (numberOfYears));
+    console.log(offspringPerDinosaur);
+    totalOffspring += offspringPerDinosaur;
+  }
+  return totalOffspring;
+}
+
 module.exports = Park;
