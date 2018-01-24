@@ -18,8 +18,8 @@ describe('Park', function(){
     dinosaur2 = new Dinosaur("Velociraptor", 4);
     dinosaur3 = new Dinosaur("Triceratops", 1);
     dinosaur4 = new Dinosaur("Triceratops", 1);
-    tyrannosaurus = new Dinosaur("tyrannosaurus", 4);
-    dilophosaurus = new Dinosaur("dilophosaurus", 3);
+    tyrannosaurus = new Dinosaur("tyrannosaurus", 3);
+    dilophosaurus = new Dinosaur("dilophosaurus", 2);
 
   })
 
