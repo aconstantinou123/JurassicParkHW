@@ -39,6 +39,7 @@ describe('Park', function(){
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
+    assert.strictEqual(park.enclosure.length, 4);
     park.removeByType("Triceratops");
     assert.strictEqual(park.enclosure.length, 2);
   })
@@ -49,7 +50,7 @@ describe('Park', function(){
     park.addDinosaur(dinosaur3);
     var resultArray = [];
     resultArray.push(dinosaur2);
-    var testResult = park.moreThanTwoEggs();
+    var testResult = park.moreThanXEggs(2);
     assert.deepEqual(resultArray, testResult);
   })
 

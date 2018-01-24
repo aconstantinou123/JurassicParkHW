@@ -7,13 +7,13 @@ Park.prototype.addDinosaur = function(dinosaur){
 }
 
 Park.prototype.removeByType = function(type){
-  this. enclosure = this.enclosure.filter(dinosaur => dinosaur.type !== type);
+  this.enclosure = this.enclosure.filter(dinosaur => dinosaur.type !== type);
 }
 
-Park.prototype.moreThanTwoEggs = function(){
+Park.prototype.moreThanXEggs = function(numberOfEggs){
   var resultArray = [];
   for (var i = 0; i < this.enclosure.length; i++) {
-    if(this.enclosure[i].numberOfOffspring > 2){
+    if(this.enclosure[i].numberOfOffspring > numberOfEggs){
         resultArray.push(this.enclosure[i]);
     }
   }
@@ -24,7 +24,6 @@ Park.prototype.calculateDinosaurs = function(numberOfYears){
   var totalOffspring = 0;
   for (var i = 0; i < this.enclosure.length; i++) {
     var offspringPerDinosaur = Math.pow(this.enclosure[i].numberOfOffspring, (numberOfYears));
-    console.log(offspringPerDinosaur);
     totalOffspring += offspringPerDinosaur;
   }
   return totalOffspring;
